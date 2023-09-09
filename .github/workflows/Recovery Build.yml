@@ -12,29 +12,29 @@ on:
         required: true
         default: 'twrp-12.1'
       DEVICE_TREE_URL:
-        description: 'DEVICE_TREE_URL'
+        description: 'https://github.com/RealmeGTNeo3T-Devs/android_hardware_oplus
         required: true
         default: 'https://github.com/TeamWin/android_device_asus_I003D'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-12.1'
+        default: 'android-13'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/asus/I003D'
-      COMMON_TREE_URL:
+        default: 'device/realme/gt neo 3t'
+      COMMON_TREE_URL:https://github.com/RealmeGTNeo3T-Devs/android_kernel_realme_spartan
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
       COMMON_PATH:
         description: 'COMMON_PATH (if no common tree, leave blank)'
         required: false
       DEVICE_NAME:
-        description: 'DEVICE_NAME'
+        description: 'RMX7133'
         required: true
         default: 'I003D'
       MAKEFILE_NAME:
-        description: 'MAKEFILE_NAME'
+        description: 'RECOVERY'
         required: true
         default: 'twrp_I003D'
       BUILD_TARGET:
@@ -97,8 +97,6 @@ jobs:
       
     - name: Initialize repo
       run: |
-        mkdir workspace
-        cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
         git config --global user.name "Captain Throwback"
         git config --global user.email "captainthrowback@hotmail.com"
